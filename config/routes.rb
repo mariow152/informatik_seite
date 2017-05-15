@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get 'racing', to: 'pages#racing'
   get 'sports', to: 'pages#sports'
   get 'strategy', to: 'pages#strategy'
+  resources :games, only: [:new, :create]
 end
