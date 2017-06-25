@@ -1,9 +1,12 @@
 class PagesController < ApplicationController
-    def home
+    def index
+        @games = Game.all
     end
-    def  action
-    end
+    
+    def action
         
+    end
+    
     def  adventure
     end
         
@@ -13,6 +16,7 @@ class PagesController < ApplicationController
     def  sports
     end
         
-    def  strategy
+    def  simulation
     end
+    
 end

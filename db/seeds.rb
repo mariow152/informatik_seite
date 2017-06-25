@@ -6,5 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-Game.destroy("1")
+Category.create(name: 'action')
+Category.create(name: 'adventure')
+Category.create(name: 'racing')
+Category.create(name: 'simulation')
+Category.create(name: 'sports')

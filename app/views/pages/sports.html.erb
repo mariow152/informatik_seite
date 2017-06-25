@@ -1,0 +1,34 @@
+<html>
+<head>
+    
+</head>
+
+<body>
+    <%= Game.where(category_id: '5').find_each do |s| %>
+    <div class='height-games float-left'>
+      <div class='float-left images'><%= image_tag s.image, class:"images" %></div>
+      <div class='width-games float-left'>
+        <div class='game float-left'>
+          <h3><%= s.name %></h3>
+          <p><%= s.description %></p>
+        </div>
+      </div>
+      <div class="float-right price"><%= button_to s.price, shopping_cart_path(:game_id => s), :method => 'POST', class:"btn btn-success" %></div>
+    </div>
+  <% end %>
+  
+  <%= Game.where(genre: 'sports').find_each do |s| %>
+    <div class='height-games float-left'>
+      <div class='float-left images'><%= image_tag s.image, class:"images" %></div>
+      <div class='width-games float-left'>
+        <div class='game float-left'>
+          <h3><%= s.name %></h3>
+          <p><%= s.description %></p>
+        </div>
+      </div>
+      <div class="float-right price"><%= button_to s.price, shopping_cart_path(:game_id => s), :method => 'POST', class:"btn btn-success" %></div>
+    </div>
+  <% end %>
+</body>
+    
+</html>

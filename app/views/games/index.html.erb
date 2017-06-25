@@ -1,0 +1,12 @@
+<% for game in @games %>
+    <div class='height-games float-left'>
+      <div class='float-left images'><%= image_tag game.image, class:"images" %></div>
+      <div class='width-games float-left'>
+        <div class='float-left game'>
+          <h3><%= game.name %></h3>
+          <p><%= game.description %></p>
+        </div>
+      </div>
+      <div class="float-right price"><%= button_to game.price, shopping_cart_path(:game_id => game), :method => 'POST', class:"btn btn-success" %></div>
+    </div>
+  <% end %>

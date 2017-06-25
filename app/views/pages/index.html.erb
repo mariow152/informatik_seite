@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css.css">
+<title>Game Market</title>
+<head>
+  <script src="jquery.js">
+  </script>
+</head>
+
+
+<body>
+	<div>
+		<%= Game.all.find_each do |s| %>
+	    <%= image_tag s.image, class: "mySlides items" %>
+
+	    <% end %>
+  </div>
+  
+<h1>Welcome to the Game Market!</h1>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ipsum, recusandae, in, nobis explicabo ullam vel architecto asperiores tempore veniam placeat unde consectetur laudantium quo iure quas voluptatibus? Numquam, vero. 
+ Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, necessitatibus, voluptatibus, dolores, corporis error hic maxime iste quos eaque accusamus delectus sunt iure alias assumenda rem optio quidem temporibus soluta. ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, natus, itaque, expedita nobis voluptates officia ut fugit aspernatur atque voluptatibus distinctio est! Necessitatibus, beatae laudantium recusandae impedit qui possimus odit.
+ 
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000); // Change image every 4 seconds
+}
+</script>
+
+</body>
+</html>

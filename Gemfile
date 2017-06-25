@@ -52,3 +52,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 ruby '2.3.0'
+
+gem "paperclip", "~> 5.0.0"
+
+gem 'devise'
+
+gem 'acts_as_shopping_cart'
+

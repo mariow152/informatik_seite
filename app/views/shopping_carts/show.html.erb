@@ -1,0 +1,9 @@
+<div class="signup"><h2>Shopping Cart</h2>
+
+<%= render :partial => 'shopping_cart_item', :collection => @shopping_cart.cart_items %>
+
+<div>
+
+  <div><b>Total: </b><%= number_to_currency @shopping_cart.subtotal %></div>
+  <%= link_to 'Clear Cart' , shopping_cart_path , :method => 'DELETE' %>
+</div>
